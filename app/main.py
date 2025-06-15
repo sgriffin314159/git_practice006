@@ -3,9 +3,9 @@
 import asyncio
 import uvicorn
 from fastapi import FastAPI, Body
-from .openai_client import client
-from .post_generator import generate_post
-from .storage import load_data, save_data
+from openai_client import client
+from post_generator import generate_post
+from storage import load_data, save_data
 
 
 app = FastAPI()
