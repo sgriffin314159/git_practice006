@@ -1,7 +1,7 @@
 # Sends prompt and article to LLM
 # 
-from .openai_client import client
-from .prompts import PROMPT_GENERATE_DRAFT
+from openai_client import client
+from prompts import PROMPT_GENERATE_DRAFT
 import asyncio
 
 
