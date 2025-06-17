@@ -14,6 +14,8 @@ def test_generate_posts(article, num_posts, key):
     
     response = requests.post(url, json=payload)
     
+    #print("Checking response codes.")
+
     if response.status_code == 200:
         responses[key] = response.json().get("drafts", [])
     else:

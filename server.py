@@ -41,7 +41,7 @@ async def generate_post(article_text: str) -> str:
     prompt = PROMPT_GENERATE_DRAFT.format(article_text=article_text)
     chat_completion = await asyncio.to_thread(client.chat.completions.create,
         messages=[{"role": "user", "content": prompt}],
-        model="gpt-4o",)
+        model="gpt-4.1-mini-2025-04-14",)
     return chat_completion.choices[0].message.content.strip()
 
 @app.post("/generate-posts")
